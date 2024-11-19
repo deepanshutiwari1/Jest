@@ -62,3 +62,35 @@ describe("Null and undefined Values", () => {
     expect(value).toBeFalsy();
   });
 });
+
+describe("Number Comparison", () => {
+  test("number should be 6", () => {
+    const number = 6;
+    expect(number).toBe(6);
+  });
+
+  test("number should be equal to  7", () => {
+    const number = 7;
+    expect(number).toBe(7);
+  });
+
+  test("number should be > 3", () => {
+    const number = 5;
+    expect(number).toBeGreaterThan(3);
+  });
+
+  test("number should be >= to 6", () => {
+    const number = 7;
+    expect(number).toBeGreaterThanOrEqual(6);
+  });
+
+  test("number should be < 6", () => {
+    const number = 5;
+    expect(number).toBeLessThan(6);
+  });
+
+  test("number should be <= 45", () => {
+    const number = 41;
+    expect(number).toBeLessThanOrEqual(45);
+  });
+});
