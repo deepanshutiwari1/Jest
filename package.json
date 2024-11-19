@@ -1,4 +1,10 @@
 {
   "name": "Jest",
-  "packageManager": "yarn@4.4.1"
+  "packageManager": "yarn@4.4.1",
+  "scripts": {
+    "test": "jest src/*"
+  },
+  "dependencies": {
+    "jest": "^29.7.0"
+  }
 }
