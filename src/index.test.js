@@ -93,4 +93,19 @@ describe("Number Comparison", () => {
     const number = 41;
     expect(number).toBeLessThanOrEqual(45);
   });
+
+  test("number should be close to  0.4 with 5 decimal places", () => {
+    const number = 0.2 + 0.1;
+    expect(number).toBeCloseTo(0.3, 5);
+  });
+});
+
+describe("String comparison", () => {
+  test("string should not contain I", () => {
+    expect("Hello ").not.toMatch(/I/);
+  });
+
+  test("string should contain co", () => {
+    expect("comanding officer").toMatch(/co/);
+  });
 });
