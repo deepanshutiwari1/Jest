@@ -109,3 +109,44 @@ describe("String comparison", () => {
     expect("comanding officer").toMatch(/co/);
   });
 });
+
+describe("Array matchers", () => {
+  // If added only, Other tests will be skipped
+  // test.only
+  test("Array should contain an item!", () => {
+    const toDoList = [
+      "Go for walk!",
+      "get haircut.",
+      "buy new clothes",
+      "Meditate",
+    ];
+
+    expect(toDoList).toContain("Meditate");
+  });
+});
+
+describe("Exception matchers", () => {
+  function throws() {
+    throw "An error occured!";
+  }
+
+  function throwsAnException() {
+    throw new Error("An error occured!");
+  }
+
+  test("Function should through", () => {
+    expect(() => throws()).toThrow();
+  });
+
+  test("Function should through error", () => {
+    expect(() => throwsAnException()).toThrow(Error);
+  });
+
+  test("Function should through error with message", () => {
+    expect(() => throwsAnException()).toThrow("An error occured!");
+  });
+
+  test("Function should through error with message containing", () => {
+    expect(() => throwsAnException()).toThrow(/error occured!/);
+  });
+});
