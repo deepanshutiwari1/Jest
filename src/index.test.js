@@ -168,4 +168,21 @@ describe("Mock function and test", () => {
     makeACall();
     expect(makeACall).toHaveReturnedWith(2);
   });
+
+  test("Mock a function that have been called!", () => {
+    const makeACall = jest.fn(() => {
+      return 2;
+    });
+    // Make next line comment
+    makeACall();
+    expect(makeACall).toHaveBeenCalled();
+  });
+
+  test("Mock a function that have been called with arguments", () => {
+    const makeACall = jest.fn((l, m) => {
+      return 2;
+    });
+    makeACall("as", 45);
+    expect(makeACall).toHaveBeenCalledWith("as", 45);
+  });
 });
