@@ -1,4 +1,4 @@
-const multiply = require("./index");
+const { multiply } = require("./index");
 
 // Test Suite // As many tests files as many Suits
 
