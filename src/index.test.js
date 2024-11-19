@@ -22,3 +22,43 @@ describe("Objects", () => {
     expect(person).toEqual({ name: "Mohan Kumar", age: 23 });
   });
 });
+
+describe("Null and undefined Values", () => {
+  it("value is null!", () => {
+    const value = null;
+    expect(value).toBeNull();
+  });
+
+  it("value is not null", () => {
+    const value = 90;
+    expect(value).not.toBeNull();
+  });
+
+  it("value is defined", () => {
+    let value = 3;
+
+    expect(value).toBeDefined();
+  });
+
+  it("value is not defined", () => {
+    let value;
+
+    expect(value).not.toBeDefined();
+  });
+
+  it("value is un defined", () => {
+    let value;
+
+    expect(value).toBeUndefined();
+  });
+
+  it("value is truthy", () => {
+    let value = "3";
+    expect(value).toBeTruthy();
+  });
+
+  it("value is falsy", () => {
+    let value = undefined;
+    expect(value).toBeFalsy();
+  });
+});
