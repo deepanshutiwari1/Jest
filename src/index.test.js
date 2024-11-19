@@ -150,3 +150,22 @@ describe("Exception matchers", () => {
     expect(() => throwsAnException()).toThrow(/error occured!/);
   });
 });
+
+describe("Mock function and test", () => {
+  test("Mock a function that returns without error!", () => {
+    const makeACall = jest.fn(() => {
+      // throw Error();
+      return 2;
+    });
+    makeACall();
+    expect(makeACall).toHaveReturned();
+  });
+
+  test("Mock a function that returns with value!", () => {
+    const makeACall = jest.fn(() => {
+      return 2;
+    });
+    makeACall();
+    expect(makeACall).toHaveReturnedWith(2);
+  });
+});
