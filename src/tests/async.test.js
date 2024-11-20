@@ -22,4 +22,25 @@ describe("Async unit tests!", () => {
       expect(err).toBe("Not Found");
     }
   });
+
+  test("Fetch resolves.", async () => {
+    await expect(
+      fetchData("https://jsonplaceholder.typicode.com/todos/3").then((data) =>
+        data.json()
+      )
+    ).resolves.toEqual({
+      userId: 1,
+      id: 3,
+      title: "fugiat veniam minus",
+      completed: false,
+    });
+  });
+
+  test("Fetch rejects.", async () => {
+    await expect(
+      fetchData("https://jsonpaceholder.typicode.com/todos/3").then((d) =>
+        d.json()
+      )
+    ).rejects.toThrow();
+  });
 });
