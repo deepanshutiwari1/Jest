@@ -2,4 +2,8 @@ function multiply(i, j) {
   return i * j;
 }
 
-module.exports = { multiply };
+function fetchData(url) {
+  return fetch(url);
+}
+
+module.exports = { multiply, fetchData };
