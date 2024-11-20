@@ -2,7 +2,7 @@
   "name": "Jest",
   "packageManager": "yarn@4.4.1",
   "scripts": {
-    "test": "jest src/*"
+    "test": "jest src/tests/* --watch"
   },
   "dependencies": {
     "jest": "^29.7.0"
