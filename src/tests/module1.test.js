@@ -28,6 +28,8 @@ describe("Test using spy on a function", () => {
     module1.greet("Namaste");
 
     expect(spyGreet).toHaveBeenCalledTimes(2);
+
+    spyGreet.mockRestore();
   });
 });
 
